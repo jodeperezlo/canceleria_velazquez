@@ -1,0 +1,16 @@
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Debug\CanceleriaVelazquez.exe.config
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Debug\CanceleriaVelazquez.exe
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Debug\CanceleriaVelazquez.pdb
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Debug\CanceleriaVelazquez.xml
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.vbproj.AssemblyReference.cache
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.FormPrincipal.resources
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.Resources.resources
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.vbproj.GenerateResource.cache
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.vbproj.CoreCompileInputs.cache
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.exe
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.xml
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.pdb
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.FormClientes.resources
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.FormTrabajos.resources
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.FormNuevoTrabajo.resources
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.FormProveedores.resources
