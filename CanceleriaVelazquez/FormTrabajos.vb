@@ -41,6 +41,7 @@ Public Class FormTrabajos
         txtTrabajo.Text = ""
         txtCosto.Text = ""
         txtCliente.Text = ""
+        dtpFechaTerminacion.Value = Now
     End Sub
 
     Private Sub EnabledButtons(botonGuardar As Boolean, botonActualizar As Boolean, botonEliminar As Boolean, botonCancelar As Boolean)

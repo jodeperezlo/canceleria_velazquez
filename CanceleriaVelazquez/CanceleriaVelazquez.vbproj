@@ -215,6 +215,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\ReportTicketTrabajo.rdlc" />
+    <EmbeddedResource Include="RDLC\ReportFirstTicketTrabajo.rdlc" />
     <EmbeddedResource Include="RDLC\ReportComprasAProveedores.rdlc" />
     <EmbeddedResource Include="RDLC\ReportTrabajos.rdlc" />
     <EmbeddedResource Include="RDLC\ReportMateriales.rdlc" />
