@@ -28,11 +28,12 @@ Partial Class FormPrincipal
         Me.pnlBarraIzquierda = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnProveedores = New System.Windows.Forms.Button()
-        Me.btnMaterial = New System.Windows.Forms.Button()
+        Me.btnMateriales = New System.Windows.Forms.Button()
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.pnlBarraSuperior = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.pnlFondo.SuspendLayout()
         Me.pnlContenido.SuspendLayout()
         Me.pnlBarraIzquierda.SuspendLayout()
@@ -63,9 +64,10 @@ Partial Class FormPrincipal
         'pnlBarraIzquierda
         '
         Me.pnlBarraIzquierda.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pnlBarraIzquierda.Controls.Add(Me.Button2)
         Me.pnlBarraIzquierda.Controls.Add(Me.Button1)
         Me.pnlBarraIzquierda.Controls.Add(Me.btnProveedores)
-        Me.pnlBarraIzquierda.Controls.Add(Me.btnMaterial)
+        Me.pnlBarraIzquierda.Controls.Add(Me.btnMateriales)
         Me.pnlBarraIzquierda.Controls.Add(Me.btnClientes)
         Me.pnlBarraIzquierda.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlBarraIzquierda.Location = New System.Drawing.Point(0, 69)
@@ -84,7 +86,7 @@ Partial Class FormPrincipal
         Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button1.Location = New System.Drawing.Point(19, 420)
+        Me.Button1.Location = New System.Drawing.Point(19, 348)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(130, 75)
@@ -104,7 +106,7 @@ Partial Class FormPrincipal
         Me.btnProveedores.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.btnProveedores.Image = CType(resources.GetObject("btnProveedores.Image"), System.Drawing.Image)
         Me.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnProveedores.Location = New System.Drawing.Point(19, 299)
+        Me.btnProveedores.Location = New System.Drawing.Point(19, 239)
         Me.btnProveedores.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnProveedores.Name = "btnProveedores"
         Me.btnProveedores.Size = New System.Drawing.Size(130, 75)
@@ -113,25 +115,25 @@ Partial Class FormPrincipal
         Me.btnProveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnProveedores.UseVisualStyleBackColor = True
         '
-        'btnMaterial
+        'btnMateriales
         '
-        Me.btnMaterial.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.btnMaterial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnMaterial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMaterial.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMaterial.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.btnMaterial.Image = CType(resources.GetObject("btnMaterial.Image"), System.Drawing.Image)
-        Me.btnMaterial.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnMaterial.Location = New System.Drawing.Point(19, 175)
-        Me.btnMaterial.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnMaterial.Name = "btnMaterial"
-        Me.btnMaterial.Size = New System.Drawing.Size(130, 75)
-        Me.btnMaterial.TabIndex = 1
-        Me.btnMaterial.Text = "Material"
-        Me.btnMaterial.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnMaterial.UseVisualStyleBackColor = True
+        Me.btnMateriales.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMateriales.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnMateriales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnMateriales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnMateriales.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMateriales.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMateriales.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.btnMateriales.Image = CType(resources.GetObject("btnMateriales.Image"), System.Drawing.Image)
+        Me.btnMateriales.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnMateriales.Location = New System.Drawing.Point(19, 136)
+        Me.btnMateriales.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnMateriales.Name = "btnMateriales"
+        Me.btnMateriales.Size = New System.Drawing.Size(130, 75)
+        Me.btnMateriales.TabIndex = 1
+        Me.btnMateriales.Text = "Materiales"
+        Me.btnMateriales.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnMateriales.UseVisualStyleBackColor = True
         '
         'btnClientes
         '
@@ -144,7 +146,7 @@ Partial Class FormPrincipal
         Me.btnClientes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.btnClientes.Image = CType(resources.GetObject("btnClientes.Image"), System.Drawing.Image)
         Me.btnClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnClientes.Location = New System.Drawing.Point(19, 54)
+        Me.btnClientes.Location = New System.Drawing.Point(19, 29)
         Me.btnClientes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.Size = New System.Drawing.Size(130, 75)
@@ -185,6 +187,26 @@ Partial Class FormPrincipal
         Me.pbLogo.TabIndex = 3
         Me.pbLogo.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button2.Location = New System.Drawing.Point(19, 464)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(130, 90)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Comprar Material"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -212,10 +234,11 @@ Partial Class FormPrincipal
     Friend WithEvents pnlContenido As Panel
     Friend WithEvents pnlBarraIzquierda As Panel
     Friend WithEvents btnProveedores As Button
-    Friend WithEvents btnMaterial As Button
+    Friend WithEvents btnMateriales As Button
     Friend WithEvents btnClientes As Button
     Friend WithEvents pnlBarraSuperior As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents pbLogo As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

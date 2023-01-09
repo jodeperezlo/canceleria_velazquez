@@ -453,6 +453,7 @@ Partial Class FormProveedores
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormProveedores"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormProveedores"
         Me.pnlBarraSuperior.ResumeLayout(False)
         Me.pnlBarraSuperior.PerformLayout()

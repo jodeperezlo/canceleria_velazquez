@@ -22,5 +22,70 @@ CanceleriaVelazquez
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:CanceleriaVelazquez.dsClientes">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.dsClientes.ClientesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.dsClientes.ClientesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.dsClientes.ClientesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.dsClientesTableAdapters.ClientesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.dsClientesTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.dsClientesTableAdapters.TableAdapterManager.UpdateUpdatedRows(CanceleriaVelazquez.dsClientes,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.dsClientesTableAdapters.TableAdapterManager.UpdateInsertedRows(CanceleriaVelazquez.dsClientes,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.dsClientesTableAdapters.TableAdapterManager.UpdateDeletedRows(CanceleriaVelazquez.dsClientes,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.dsClientesTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.dsClientesTableAdapters.TableAdapterManager.UpdateAll(CanceleriaVelazquez.dsClientes)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.dsClientesTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.dsClientesTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>

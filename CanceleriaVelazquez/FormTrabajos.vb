@@ -16,9 +16,10 @@ Public Class FormTrabajos
             da.Fill(dt)
 
             dgvTrabajos.DataSource = dt
-            dbConnection.Close()
         Catch ex As Exception
-            MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+            MessageBox.Show("Error al cargar la información de los proveedores: " & ex.Message, "Error")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -62,9 +63,10 @@ Public Class FormTrabajos
 
             comando.ExecuteNonQuery()
             MessageBox.Show("Se actualizó el trabajo correctamente", "Trabajo actualizado")
-            dbConnection.Close()
         Catch ex As Exception
-            MessageBox.Show("No se pudo actualizar la información del cliente: " & ex.Message, "Error al actualizar cliente")
+            MessageBox.Show("No se pudo actualizar la información del proveedor: " & ex.Message, "Error al actualizar proveedor")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -77,9 +79,10 @@ Public Class FormTrabajos
 
             comando.ExecuteNonQuery()
             MessageBox.Show("Se eliminó al cliente correctamente", "Cliente eliminado")
-            dbConnection.Close()
         Catch ex As Exception
-            MessageBox.Show("No se pudo eliminar la información del cliente: " & ex.Message, "Error al eliminar el cliente")
+            MessageBox.Show("No se pudo eliminar la información del proveedor: " & ex.Message, "Error al eliminar el proveedor")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -97,22 +100,10 @@ Public Class FormTrabajos
     End Sub
     Private Function ValidaFormulario() As Boolean
         If txtTrabajo.Text.Trim() = "" Then
-            MessageBox.Show("El nombre no puede ir vacío, introduzca el nombre.", "Error al intentar guardar - Ingrese el nombre")
-            Return False
-        ElseIf txtCliente.Text.Trim() = "" Then
-            MessageBox.Show("El teléfono no puede ir vacío, introduzca el número de teléfono.", "Error al intentar guardar - Ingrese el teléfono")
+            MessageBox.Show("El nombre del trabajo no puede ir vacío, introduzca el trabajo.", "Error al intentar guardar - Ingrese el trabajo")
             Return False
         ElseIf txtCosto.Text.Trim() = "" Then
-            MessageBox.Show("El domicilio no puede ir vacío, introduzca el domicilio.", "Error al intentar guardar - Ingrese el domicilio")
-            Return False
-        ElseIf txtTrabajo.Text.Trim().Length < 2 Then
-            MessageBox.Show("El nombre debe de tener al menos 2 caracteres para ser un nombre válido.", "Error al intentar guardar - Nombre no válido")
-            Return False
-        ElseIf txtCliente.Text.Trim().Length < 10 Then
-            MessageBox.Show("El teléfono debe de tener al menos 10 caracteres para ser un teléfono válido.", "Error al intentar guardar - Telefono no válido")
-            Return False
-        ElseIf txtCosto.Text.Trim().Length < 4 Then
-            MessageBox.Show("El domicilio es muy corto, ingrese un domicilio válido.", "Error al intentar guardar - Domicilio no válido")
+            MessageBox.Show("El costo no puede ir vacío, introduzca el costo.", "Error al intentar guardar - Ingrese el costo")
             Return False
         Else
             Return True
@@ -146,9 +137,10 @@ Public Class FormTrabajos
                 da.Fill(dt)
 
                 dgvTrabajos.DataSource = dt
-                dbConnection.Close()
             Catch ex As Exception
-                MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+                MessageBox.Show("Error al cargar la información de los trabajos: " & ex.Message, "Error")
+            Finally
+                dbConnection.Close()
             End Try
         End If
         dgvTrabajos.ClearSelection()
@@ -169,9 +161,10 @@ Public Class FormTrabajos
 
                 dgvTrabajos.DataSource = dt
                 dgvTrabajos.ClearSelection()
-                dbConnection.Close()
             Catch ex As Exception
-                MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+                MessageBox.Show("Error al cargar la información de los trabajos: " & ex.Message, "Error")
+            Finally
+                dbConnection.Close()
             End Try
         End If
     End Sub
@@ -193,7 +186,7 @@ Public Class FormTrabajos
     Private Sub BuscarPorFechas()
         Try
             dbConnection.Open()
-            Dim query As String = "SELECT T.Codigo, T.Trabajo, C.Codigo AS [Código del cliente], C.Nombre AS Cliente, T.Costo, T.FechaTerminacion AS [Fecha de terminación] FROM Trabajos T INNER JOIN Clientes C ON C.Codigo = T.Cliente WHERE FechaTerminacion BETWEEN #" + dtpFechaInicio.Value.AddDays(-1) + "# AND #" + dtpFechaFin.Value + "# ORDER BY FechaTerminacion DESC"
+            Dim query As String = "SELECT T.Codigo, T.Trabajo, C.Codigo AS [Código del cliente], C.Nombre AS Cliente, T.Costo, T.FechaTerminacion AS [Fecha de terminación] FROM Trabajos T INNER JOIN Clientes C ON C.Codigo = T.Cliente WHERE FechaTerminacion BETWEEN #" + dtpFechaInicio.Value + "# AND #" + dtpFechaFin.Value + "# ORDER BY FechaTerminacion DESC"
             Dim comando As New OleDb.OleDbCommand(query, dbConnection)
 
             Dim da As New OleDb.OleDbDataAdapter(comando)
@@ -201,9 +194,10 @@ Public Class FormTrabajos
             da.Fill(dt)
 
             dgvTrabajos.DataSource = dt
-            dbConnection.Close()
         Catch ex As Exception
-            MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+            MessageBox.Show("Error al cargar la información de los trabajos: " & ex.Message, "Error")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 #End Region
@@ -354,5 +348,6 @@ Public Class FormTrabajos
 
     Private Sub dtpFechaFin_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaFin.ValueChanged
         BuscarPorFechas()
+        dtpFechaInicio.MaxDate = dtpFechaFin.Value
     End Sub
 End Class

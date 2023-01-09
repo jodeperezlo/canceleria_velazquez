@@ -44,10 +44,11 @@ Public Class FormNuevoTrabajo
             comando.Parameters.AddWithValue("FechaTerm", dtpFechaTerminacion.Value)
 
             comando.ExecuteNonQuery()
-            MessageBox.Show("Se agregó el nuevo cliente correctamente", "Nuevo cliente guardado")
-            dbConnection.Close()
+            MessageBox.Show("Se agregó el nuevo trabajo correctamente", "Nuevo trabajo guardado")
         Catch ex As Exception
-            MessageBox.Show("No se pudo agregar el nuevo cliente: " & ex.Message, "Error al guardar cliente")
+            MessageBox.Show("No se pudo agregar el nuevo trabajo: " & ex.Message, "Error al guardar trabajo")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 

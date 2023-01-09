@@ -16,9 +16,10 @@ Public Class FormProveedores
             da.Fill(dt)
 
             dgvProveedores.DataSource = dt
-            dbConnection.Close()
         Catch ex As Exception
-            MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+            MessageBox.Show("Error al cargar la información de los proveedores: " & ex.Message, "Error")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -60,10 +61,11 @@ Public Class FormProveedores
             comando.Parameters.AddWithValue("Tel", txtTelefono.Text)
 
             comando.ExecuteNonQuery()
-            MessageBox.Show("Se agregó el nuevo cliente correctamente", "Nuevo cliente guardado")
-            dbConnection.Close()
+            MessageBox.Show("Se agregó el nuevo proveedor correctamente", "Nuevo proveedor guardado")
         Catch ex As Exception
-            MessageBox.Show("No se pudo agregar el nuevo cliente: " & ex.Message, "Error al guardar cliente")
+            MessageBox.Show("No se pudo agregar el nuevo proveedor: " & ex.Message, "Error al guardar proveedor")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -78,10 +80,11 @@ Public Class FormProveedores
             comando.Parameters.AddWithValue("Cod", txtCodigo.Text)
 
             comando.ExecuteNonQuery()
-            MessageBox.Show("Se actualizó el cliente correctamente", "Cliente actualizado")
-            dbConnection.Close()
+            MessageBox.Show("Se actualizó el proveedor correctamente", "Proveedor actualizado")
         Catch ex As Exception
-            MessageBox.Show("No se pudo actualizar la información del cliente: " & ex.Message, "Error al actualizar cliente")
+            MessageBox.Show("No se pudo actualizar la información del proveedor: " & ex.Message, "Error al actualizar proveedor")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -93,10 +96,11 @@ Public Class FormProveedores
             comando.Parameters.AddWithValue("Cod", txtCodigo.Text)
 
             comando.ExecuteNonQuery()
-            MessageBox.Show("Se eliminó al cliente correctamente", "Cliente eliminado")
-            dbConnection.Close()
+            MessageBox.Show("Se eliminó al proveedor correctamente", "Proveedor eliminado")
         Catch ex As Exception
-            MessageBox.Show("No se pudo eliminar la información del cliente: " & ex.Message, "Error al eliminar el cliente")
+            MessageBox.Show("No se pudo eliminar la información del proveedor: " & ex.Message, "Error al eliminar el proveedor")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -124,7 +128,7 @@ Public Class FormProveedores
             txtTelefono.Focus()
             Return False
         ElseIf txtProveedor.Text.Trim().Length < 2 Then
-            MessageBox.Show("El nombre debe de tener al menos 2 caracteres para ser un nombre válido.", "Error al intentar guardar - Nombre no válido")
+            MessageBox.Show("El nombre del proveedor debe de tener al menos 2 caracteres para ser un nombre válido.", "Error al intentar guardar - Nombre no válido")
             txtProveedor.Focus()
             Return False
         ElseIf txtRFC.Text.Trim().Length < 13 Then
@@ -167,9 +171,10 @@ Public Class FormProveedores
                 da.Fill(dt)
 
                 dgvProveedores.DataSource = dt
-                dbConnection.Close()
             Catch ex As Exception
-                MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+                MessageBox.Show("Error al cargar la información de los proveedores: " & ex.Message, "Error")
+            Finally
+                dbConnection.Close()
             End Try
         End If
         dgvProveedores.ClearSelection()
@@ -190,9 +195,10 @@ Public Class FormProveedores
 
                 dgvProveedores.DataSource = dt
                 dgvProveedores.ClearSelection()
-                dbConnection.Close()
             Catch ex As Exception
-                MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+                MessageBox.Show("Error al cargar la información de los proveedores: " & ex.Message, "Error")
+            Finally
+                dbConnection.Close()
             End Try
         End If
     End Sub

@@ -16,9 +16,10 @@ Public Class FormClientes
             da.Fill(dt)
 
             dgvClientes.DataSource = dt
-            dbConnection.Close()
         Catch ex As Exception
-            MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+            MessageBox.Show("Error al cargar la información de los: " & ex.Message, "Error")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -61,9 +62,10 @@ Public Class FormClientes
 
             comando.ExecuteNonQuery()
             MessageBox.Show("Se agregó el nuevo cliente correctamente", "Nuevo cliente guardado")
-            dbConnection.Close()
         Catch ex As Exception
             MessageBox.Show("No se pudo agregar el nuevo cliente: " & ex.Message, "Error al guardar cliente")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -79,9 +81,10 @@ Public Class FormClientes
 
             comando.ExecuteNonQuery()
             MessageBox.Show("Se actualizó el cliente correctamente", "Cliente actualizado")
-            dbConnection.Close()
         Catch ex As Exception
             MessageBox.Show("No se pudo actualizar la información del cliente: " & ex.Message, "Error al actualizar cliente")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -94,9 +97,10 @@ Public Class FormClientes
 
             comando.ExecuteNonQuery()
             MessageBox.Show("Se eliminó al cliente correctamente", "Cliente eliminado")
-            dbConnection.Close()
         Catch ex As Exception
             MessageBox.Show("No se pudo eliminar la información del cliente: " & ex.Message, "Error al eliminar el cliente")
+        Finally
+            dbConnection.Close()
         End Try
     End Sub
 
@@ -169,9 +173,10 @@ Public Class FormClientes
                 da.Fill(dt)
 
                 dgvClientes.DataSource = dt
-                dbConnection.Close()
             Catch ex As Exception
-                MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+                MessageBox.Show("Error al cargar la información de los clientes: " & ex.Message, "Error")
+            Finally
+                dbConnection.Close()
             End Try
         End If
         dgvClientes.ClearSelection()
@@ -192,9 +197,10 @@ Public Class FormClientes
 
                 dgvClientes.DataSource = dt
                 dgvClientes.ClearSelection()
-                dbConnection.Close()
             Catch ex As Exception
-                MessageBox.Show("Error al cargar la información de los clientes los clientes: " & ex.Message, "Error")
+                MessageBox.Show("Error al cargar la información de los clientes: " & ex.Message, "Error")
+            Finally
+                dbConnection.Close()
             End Try
         End If
     End Sub
