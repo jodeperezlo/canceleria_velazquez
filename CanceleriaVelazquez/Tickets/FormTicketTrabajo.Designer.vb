@@ -25,13 +25,23 @@ Partial Class FormTicketTrabajo
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTicketTrabajo))
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.DBCanceleriaVelazquezDataSet = New CanceleriaVelazquez.DBCanceleriaVelazquezDataSet()
         Me.TicketTrabajoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DBCanceleriaVelazquezDataSet = New CanceleriaVelazquez.DBCanceleriaVelazquezDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TicketTrabajoTableAdapter = New CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TicketTrabajoTableAdapter()
-        CType(Me.DBCanceleriaVelazquezDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TicketTrabajoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DBCanceleriaVelazquezDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'TicketTrabajoBindingSource
+        '
+        Me.TicketTrabajoBindingSource.DataMember = "TicketTrabajo"
+        Me.TicketTrabajoBindingSource.DataSource = Me.DBCanceleriaVelazquezDataSet
+        '
+        'DBCanceleriaVelazquezDataSet
+        '
+        Me.DBCanceleriaVelazquezDataSet.DataSetName = "DBCanceleriaVelazquezDataSet"
+        Me.DBCanceleriaVelazquezDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -43,18 +53,8 @@ Partial Class FormTicketTrabajo
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(635, 581)
+        Me.ReportViewer1.Size = New System.Drawing.Size(480, 726)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'DBCanceleriaVelazquezDataSet
-        '
-        Me.DBCanceleriaVelazquezDataSet.DataSetName = "DBCanceleriaVelazquezDataSet"
-        Me.DBCanceleriaVelazquezDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TicketTrabajoBindingSource
-        '
-        Me.TicketTrabajoBindingSource.DataMember = "TicketTrabajo"
-        Me.TicketTrabajoBindingSource.DataSource = Me.DBCanceleriaVelazquezDataSet
         '
         'TicketTrabajoTableAdapter
         '
@@ -64,7 +64,7 @@ Partial Class FormTicketTrabajo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(635, 581)
+        Me.ClientSize = New System.Drawing.Size(480, 726)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -73,8 +73,8 @@ Partial Class FormTicketTrabajo
         Me.Name = "FormTicketTrabajo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ticket de Trabajo"
-        CType(Me.DBCanceleriaVelazquezDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TicketTrabajoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DBCanceleriaVelazquezDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
