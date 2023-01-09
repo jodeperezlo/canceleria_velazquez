@@ -678,7 +678,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Teléfono Cliente:</Value>
+                <Value>Domicilio Cliente:</Value>
                 <Style>
                   <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -691,7 +691,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox20</rd:DefaultName>
         <Top>5.45169in</Top>
-        <Left>0.03317in</Left>
+        <Left>0.01389in</Left>
         <Height>0.20833in</Height>
         <Width>1.17709in</Width>
         <ZIndex>20</ZIndex>
