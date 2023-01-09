@@ -58,6 +58,32 @@ Public Class FormNuevoTrabajo
         Close()
     End Sub
 
+    Private Sub ImprimirTicketTrabajo()
+        Try
+            dbConnection.Open()
+            Dim query As String = "
+                         SELECT TOP 1 Trabajos.Codigo AS NumeroFactura, Trabajos.Trabajo, Clientes.Codigo AS CodigoCliente, 
+                         Clientes.Nombre, Clientes.Telefono, Clientes.Domicilio, Trabajos.Costo, 
+                         Trabajos.FechaTerminacion AS FechaEstimadaTerminacion
+                         FROM (Clientes INNER JOIN
+                         Trabajos ON Clientes.Codigo = Trabajos.Cliente)
+                         ORDER BY Trabajos.Codigo DESC"
+            Dim comando As New OleDb.OleDbCommand(query, dbConnection)
+
+            Dim da As New OleDb.OleDbDataAdapter(comando)
+            Dim ds As New DataSet()
+            da.Fill(ds)
+
+            FormTicketTrabajo.dsFormTicketTrabajo = ds
+
+            FormTicketTrabajo.Show()
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar la información de los proveedores: " & ex.Message, "Error")
+        Finally
+            dbConnection.Close()
+        End Try
+    End Sub
+
 #End Region
 
 
@@ -73,6 +99,7 @@ Public Class FormNuevoTrabajo
         If ValidaFormulario() Then
             If MessageBox.Show("¿Está seguro de querer agregar el nuevo registro?", "Confirmación para guardar", MessageBoxButtons.YesNo) = vbYes Then
                 GuardarNuevoTrabajo()
+                ImprimirTicketTrabajo()
                 Salir()
             End If
         End If

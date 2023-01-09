@@ -179,6 +179,12 @@
     <Compile Include="Reportes\FormReporteTrabajos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Tickets\FormTicketTrabajo.Designer.vb">
+      <DependentUpon>FormTicketTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets\FormTicketTrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormClientes.resx">
@@ -208,6 +214,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\ReportTicketTrabajo.rdlc" />
     <EmbeddedResource Include="RDLC\ReportComprasAProveedores.rdlc" />
     <EmbeddedResource Include="RDLC\ReportTrabajos.rdlc" />
     <EmbeddedResource Include="RDLC\ReportMateriales.rdlc" />
@@ -227,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FormReporteTrabajos.resx">
       <DependentUpon>FormReporteTrabajos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tickets\FormTicketTrabajo.resx">
+      <DependentUpon>FormTicketTrabajo.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

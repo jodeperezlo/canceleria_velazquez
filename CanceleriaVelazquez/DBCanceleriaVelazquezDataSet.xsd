@@ -385,6 +385,33 @@ FROM            ((ComprasAProveedor INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TicketTrabajoTableAdapter" GeneratorDataComponentClassName="TicketTrabajoTableAdapter" Name="TicketTrabajo" UserDataComponentName="TicketTrabajoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBCanceleriaVelazquezConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TOP 1 Trabajos.Codigo AS NumeroFactura, Trabajos.Trabajo, Clientes.Codigo AS CodigoCliente, Clientes.Nombre, Clientes.Telefono, Clientes.Domicilio, Trabajos.Costo, 
+                         Trabajos.FechaTerminacion AS FechaEstimadaTerminacion
+FROM            (Clientes INNER JOIN
+                         Trabajos ON Clientes.Codigo = Trabajos.Cliente)
+ORDER BY Trabajos.Codigo DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Trabajo" DataSetColumn="Trabajo" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Telefono" DataSetColumn="Telefono" />
+              <Mapping SourceColumn="Domicilio" DataSetColumn="Domicilio" />
+              <Mapping SourceColumn="Costo" DataSetColumn="Costo" />
+              <Mapping SourceColumn="NumeroFactura" DataSetColumn="NumeroFactura" />
+              <Mapping SourceColumn="CodigoCliente" DataSetColumn="CodigoCliente" />
+              <Mapping SourceColumn="FechaEstimadaTerminacion" DataSetColumn="FechaEstimadaTerminacion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -393,7 +420,7 @@ FROM            ((ComprasAProveedor INNER JOIN
   <xs:element name="DBCanceleriaVelazquezDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DBCanceleriaVelazquezDataSet" msprop:Generator_UserDSName="DBCanceleriaVelazquezDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_RowClassName="ClientesRow" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowEvArgName="ClientesRowChangeEvent">
+        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_RowEvArgName="ClientesRowChangeEvent" msprop:Generator_RowClassName="ClientesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Codigo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
@@ -421,7 +448,7 @@ FROM            ((ComprasAProveedor INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ComprasAProveedor" msprop:Generator_TableClassName="ComprasAProveedorDataTable" msprop:Generator_TableVarName="tableComprasAProveedor" msprop:Generator_TablePropName="ComprasAProveedor" msprop:Generator_RowDeletingName="ComprasAProveedorRowDeleting" msprop:Generator_RowChangingName="ComprasAProveedorRowChanging" msprop:Generator_RowEvHandlerName="ComprasAProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ComprasAProveedorRowDeleted" msprop:Generator_UserTableName="ComprasAProveedor" msprop:Generator_RowChangedName="ComprasAProveedorRowChanged" msprop:Generator_RowEvArgName="ComprasAProveedorRowChangeEvent" msprop:Generator_RowClassName="ComprasAProveedorRow">
+        <xs:element name="ComprasAProveedor" msprop:Generator_TableClassName="ComprasAProveedorDataTable" msprop:Generator_TableVarName="tableComprasAProveedor" msprop:Generator_RowChangedName="ComprasAProveedorRowChanged" msprop:Generator_TablePropName="ComprasAProveedor" msprop:Generator_RowDeletingName="ComprasAProveedorRowDeleting" msprop:Generator_RowChangingName="ComprasAProveedorRowChanging" msprop:Generator_RowEvHandlerName="ComprasAProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ComprasAProveedorRowDeleted" msprop:Generator_RowClassName="ComprasAProveedorRow" msprop:Generator_UserTableName="ComprasAProveedor" msprop:Generator_RowEvArgName="ComprasAProveedorRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Codigo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
@@ -433,7 +460,7 @@ FROM            ((ComprasAProveedor INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Materiales" msprop:Generator_TableClassName="MaterialesDataTable" msprop:Generator_TableVarName="tableMateriales" msprop:Generator_TablePropName="Materiales" msprop:Generator_RowDeletingName="MaterialesRowDeleting" msprop:Generator_RowChangingName="MaterialesRowChanging" msprop:Generator_RowEvHandlerName="MaterialesRowChangeEventHandler" msprop:Generator_RowDeletedName="MaterialesRowDeleted" msprop:Generator_UserTableName="Materiales" msprop:Generator_RowChangedName="MaterialesRowChanged" msprop:Generator_RowEvArgName="MaterialesRowChangeEvent" msprop:Generator_RowClassName="MaterialesRow">
+        <xs:element name="Materiales" msprop:Generator_TableClassName="MaterialesDataTable" msprop:Generator_TableVarName="tableMateriales" msprop:Generator_RowChangedName="MaterialesRowChanged" msprop:Generator_TablePropName="Materiales" msprop:Generator_RowDeletingName="MaterialesRowDeleting" msprop:Generator_RowChangingName="MaterialesRowChanging" msprop:Generator_RowEvHandlerName="MaterialesRowChangeEventHandler" msprop:Generator_RowDeletedName="MaterialesRowDeleted" msprop:Generator_RowClassName="MaterialesRow" msprop:Generator_UserTableName="Materiales" msprop:Generator_RowEvArgName="MaterialesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Codigo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
@@ -462,7 +489,7 @@ FROM            ((ComprasAProveedor INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Proveedores" msprop:Generator_TableClassName="ProveedoresDataTable" msprop:Generator_TableVarName="tableProveedores" msprop:Generator_TablePropName="Proveedores" msprop:Generator_RowDeletingName="ProveedoresRowDeleting" msprop:Generator_RowChangingName="ProveedoresRowChanging" msprop:Generator_RowEvHandlerName="ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedoresRowDeleted" msprop:Generator_UserTableName="Proveedores" msprop:Generator_RowChangedName="ProveedoresRowChanged" msprop:Generator_RowEvArgName="ProveedoresRowChangeEvent" msprop:Generator_RowClassName="ProveedoresRow">
+        <xs:element name="Proveedores" msprop:Generator_TableClassName="ProveedoresDataTable" msprop:Generator_TableVarName="tableProveedores" msprop:Generator_RowChangedName="ProveedoresRowChanged" msprop:Generator_TablePropName="Proveedores" msprop:Generator_RowDeletingName="ProveedoresRowDeleting" msprop:Generator_RowChangingName="ProveedoresRowChanging" msprop:Generator_RowEvHandlerName="ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedoresRowDeleted" msprop:Generator_RowClassName="ProveedoresRow" msprop:Generator_UserTableName="Proveedores" msprop:Generator_RowEvArgName="ProveedoresRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Codigo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
@@ -490,7 +517,7 @@ FROM            ((ComprasAProveedor INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Trabajos" msprop:Generator_TableClassName="TrabajosDataTable" msprop:Generator_TableVarName="tableTrabajos" msprop:Generator_TablePropName="Trabajos" msprop:Generator_RowDeletingName="TrabajosRowDeleting" msprop:Generator_RowChangingName="TrabajosRowChanging" msprop:Generator_RowEvHandlerName="TrabajosRowChangeEventHandler" msprop:Generator_RowDeletedName="TrabajosRowDeleted" msprop:Generator_UserTableName="Trabajos" msprop:Generator_RowChangedName="TrabajosRowChanged" msprop:Generator_RowEvArgName="TrabajosRowChangeEvent" msprop:Generator_RowClassName="TrabajosRow">
+        <xs:element name="Trabajos" msprop:Generator_TableClassName="TrabajosDataTable" msprop:Generator_TableVarName="tableTrabajos" msprop:Generator_RowChangedName="TrabajosRowChanged" msprop:Generator_TablePropName="Trabajos" msprop:Generator_RowDeletingName="TrabajosRowDeleting" msprop:Generator_RowChangingName="TrabajosRowChanging" msprop:Generator_RowEvHandlerName="TrabajosRowChangeEventHandler" msprop:Generator_RowDeletedName="TrabajosRowDeleted" msprop:Generator_RowClassName="TrabajosRow" msprop:Generator_UserTableName="Trabajos" msprop:Generator_RowEvArgName="TrabajosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Codigo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
@@ -507,7 +534,7 @@ FROM            ((ComprasAProveedor INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ClientesTrabajos" msprop:Generator_TableClassName="ClientesTrabajosDataTable" msprop:Generator_TableVarName="tableClientesTrabajos" msprop:Generator_RowChangedName="ClientesTrabajosRowChanged" msprop:Generator_TablePropName="ClientesTrabajos" msprop:Generator_RowDeletingName="ClientesTrabajosRowDeleting" msprop:Generator_RowChangingName="ClientesTrabajosRowChanging" msprop:Generator_RowEvHandlerName="ClientesTrabajosRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesTrabajosRowDeleted" msprop:Generator_RowClassName="ClientesTrabajosRow" msprop:Generator_UserTableName="ClientesTrabajos" msprop:Generator_RowEvArgName="ClientesTrabajosRowChangeEvent">
+        <xs:element name="ClientesTrabajos" msprop:Generator_TableClassName="ClientesTrabajosDataTable" msprop:Generator_TableVarName="tableClientesTrabajos" msprop:Generator_TablePropName="ClientesTrabajos" msprop:Generator_RowDeletingName="ClientesTrabajosRowDeleting" msprop:Generator_RowChangingName="ClientesTrabajosRowChanging" msprop:Generator_RowEvHandlerName="ClientesTrabajosRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesTrabajosRowDeleted" msprop:Generator_UserTableName="ClientesTrabajos" msprop:Generator_RowChangedName="ClientesTrabajosRowChanged" msprop:Generator_RowEvArgName="ClientesTrabajosRowChangeEvent" msprop:Generator_RowClassName="ClientesTrabajosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Codigo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" minOccurs="0" />
@@ -544,7 +571,7 @@ FROM            ((ComprasAProveedor INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ReporteComprasAProveedor" msprop:Generator_TableClassName="ReporteComprasAProveedorDataTable" msprop:Generator_TableVarName="tableReporteComprasAProveedor" msprop:Generator_TablePropName="ReporteComprasAProveedor" msprop:Generator_RowDeletingName="ReporteComprasAProveedorRowDeleting" msprop:Generator_RowChangingName="ReporteComprasAProveedorRowChanging" msprop:Generator_RowEvHandlerName="ReporteComprasAProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteComprasAProveedorRowDeleted" msprop:Generator_UserTableName="ReporteComprasAProveedor" msprop:Generator_RowChangedName="ReporteComprasAProveedorRowChanged" msprop:Generator_RowEvArgName="ReporteComprasAProveedorRowChangeEvent" msprop:Generator_RowClassName="ReporteComprasAProveedorRow">
+        <xs:element name="ReporteComprasAProveedor" msprop:Generator_TableClassName="ReporteComprasAProveedorDataTable" msprop:Generator_TableVarName="tableReporteComprasAProveedor" msprop:Generator_RowChangedName="ReporteComprasAProveedorRowChanged" msprop:Generator_TablePropName="ReporteComprasAProveedor" msprop:Generator_RowDeletingName="ReporteComprasAProveedorRowDeleting" msprop:Generator_RowChangingName="ReporteComprasAProveedorRowChanging" msprop:Generator_RowEvHandlerName="ReporteComprasAProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteComprasAProveedorRowDeleted" msprop:Generator_RowClassName="ReporteComprasAProveedorRow" msprop:Generator_UserTableName="ReporteComprasAProveedor" msprop:Generator_RowEvArgName="ReporteComprasAProveedorRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Codigo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" minOccurs="0" />
@@ -583,6 +610,44 @@ FROM            ((ComprasAProveedor INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TicketTrabajo" msprop:Generator_TableClassName="TicketTrabajoDataTable" msprop:Generator_TableVarName="tableTicketTrabajo" msprop:Generator_TablePropName="TicketTrabajo" msprop:Generator_RowDeletingName="TicketTrabajoRowDeleting" msprop:Generator_RowChangingName="TicketTrabajoRowChanging" msprop:Generator_RowEvHandlerName="TicketTrabajoRowChangeEventHandler" msprop:Generator_RowDeletedName="TicketTrabajoRowDeleted" msprop:Generator_UserTableName="TicketTrabajo" msprop:Generator_RowChangedName="TicketTrabajoRowChanged" msprop:Generator_RowEvArgName="TicketTrabajoRowChangeEvent" msprop:Generator_RowClassName="TicketTrabajoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Trabajo" msprop:Generator_ColumnVarNameInTable="columnTrabajo" msprop:Generator_ColumnPropNameInRow="Trabajo" msprop:Generator_ColumnPropNameInTable="TrabajoColumn" msprop:Generator_UserColumnName="Trabajo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_UserColumnName="Telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Domicilio" msprop:Generator_ColumnVarNameInTable="columnDomicilio" msprop:Generator_ColumnPropNameInRow="Domicilio" msprop:Generator_ColumnPropNameInTable="DomicilioColumn" msprop:Generator_UserColumnName="Domicilio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Costo" msprop:Generator_ColumnVarNameInTable="columnCosto" msprop:Generator_ColumnPropNameInRow="Costo" msprop:Generator_ColumnPropNameInTable="CostoColumn" msprop:Generator_UserColumnName="Costo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NumeroFactura" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNumeroFactura" msprop:Generator_ColumnPropNameInRow="NumeroFactura" msprop:Generator_ColumnPropNameInTable="NumeroFacturaColumn" msprop:Generator_UserColumnName="NumeroFactura" type="xs:int" minOccurs="0" />
+              <xs:element name="CodigoCliente" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigoCliente" msprop:Generator_ColumnPropNameInRow="CodigoCliente" msprop:Generator_ColumnPropNameInTable="CodigoClienteColumn" msprop:Generator_UserColumnName="CodigoCliente" type="xs:int" minOccurs="0" />
+              <xs:element name="FechaEstimadaTerminacion" msprop:Generator_ColumnVarNameInTable="columnFechaEstimadaTerminacion" msprop:Generator_ColumnPropNameInRow="FechaEstimadaTerminacion" msprop:Generator_ColumnPropNameInTable="FechaEstimadaTerminacionColumn" msprop:Generator_UserColumnName="FechaEstimadaTerminacion" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -608,10 +673,10 @@ FROM            ((ComprasAProveedor INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="ComprasAProveedorMaterial" msdata:parent="ComprasAProveedor" msdata:child="Materiales" msdata:parentkey="Material" msdata:childkey="Codigo" msprop:Generator_UserChildTable="Materiales" msprop:Generator_ChildPropName="GetMaterialesRows" msprop:Generator_UserRelationName="ComprasAProveedorMaterial" msprop:Generator_ParentPropName="ComprasAProveedorRow" msprop:Generator_RelationVarName="relationComprasAProveedorMaterial" msprop:Generator_UserParentTable="ComprasAProveedor" />
-      <msdata:Relationship name="ProveedorComprasAProveedor" msdata:parent="Proveedores" msdata:child="ComprasAProveedor" msdata:parentkey="Codigo" msdata:childkey="Proveedor" msprop:Generator_UserChildTable="ComprasAProveedor" msprop:Generator_ChildPropName="GetComprasAProveedorRows" msprop:Generator_UserRelationName="ProveedorComprasAProveedor" msprop:Generator_RelationVarName="relationProveedorComprasAProveedor" msprop:Generator_UserParentTable="Proveedores" msprop:Generator_ParentPropName="ProveedoresRow" />
-      <msdata:Relationship name="ClientesTrabajos" msdata:parent="Clientes" msdata:child="Trabajos" msdata:parentkey="Codigo" msdata:childkey="Cliente" msprop:Generator_UserChildTable="Trabajos" msprop:Generator_ChildPropName="GetTrabajosRows" msprop:Generator_UserRelationName="ClientesTrabajos" msprop:Generator_ParentPropName="ClientesRow" msprop:Generator_RelationVarName="relationClientesTrabajos" msprop:Generator_UserParentTable="Clientes" />
-      <msdata:Relationship name="ClientesTrabajos1" msdata:parent="ClientesTrabajos" msdata:child="Trabajos" msdata:parentkey="Codigo" msdata:childkey="Cliente" msprop:Generator_UserChildTable="Trabajos" msprop:Generator_ChildPropName="GetTrabajosRows" msprop:Generator_UserRelationName="ClientesTrabajos1" msprop:Generator_ParentPropName="ClientesTrabajosRow" msprop:Generator_RelationVarName="relationClientesTrabajos1" msprop:Generator_UserParentTable="ClientesTrabajos" />
+      <msdata:Relationship name="ComprasAProveedorMaterial" msdata:parent="ComprasAProveedor" msdata:child="Materiales" msdata:parentkey="Material" msdata:childkey="Codigo" msprop:Generator_UserChildTable="Materiales" msprop:Generator_ChildPropName="GetMaterialesRows" msprop:Generator_UserRelationName="ComprasAProveedorMaterial" msprop:Generator_RelationVarName="relationComprasAProveedorMaterial" msprop:Generator_UserParentTable="ComprasAProveedor" msprop:Generator_ParentPropName="ComprasAProveedorRow" />
+      <msdata:Relationship name="ProveedorComprasAProveedor" msdata:parent="Proveedores" msdata:child="ComprasAProveedor" msdata:parentkey="Codigo" msdata:childkey="Proveedor" msprop:Generator_UserChildTable="ComprasAProveedor" msprop:Generator_ChildPropName="GetComprasAProveedorRows" msprop:Generator_UserRelationName="ProveedorComprasAProveedor" msprop:Generator_ParentPropName="ProveedoresRow" msprop:Generator_RelationVarName="relationProveedorComprasAProveedor" msprop:Generator_UserParentTable="Proveedores" />
+      <msdata:Relationship name="ClientesTrabajos" msdata:parent="Clientes" msdata:child="Trabajos" msdata:parentkey="Codigo" msdata:childkey="Cliente" msprop:Generator_UserChildTable="Trabajos" msprop:Generator_ChildPropName="GetTrabajosRows" msprop:Generator_UserRelationName="ClientesTrabajos" msprop:Generator_RelationVarName="relationClientesTrabajos" msprop:Generator_UserParentTable="Clientes" msprop:Generator_ParentPropName="ClientesRow" />
+      <msdata:Relationship name="ClientesTrabajos1" msdata:parent="ClientesTrabajos" msdata:child="Trabajos" msdata:parentkey="Codigo" msdata:childkey="Cliente" msprop:Generator_UserChildTable="Trabajos" msprop:Generator_ChildPropName="GetTrabajosRows" msprop:Generator_UserRelationName="ClientesTrabajos1" msprop:Generator_RelationVarName="relationClientesTrabajos1" msprop:Generator_UserParentTable="ClientesTrabajos" msprop:Generator_ParentPropName="ClientesTrabajosRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

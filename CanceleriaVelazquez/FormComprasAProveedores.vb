@@ -349,6 +349,8 @@ Public Class FormComprasAProveedores
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         accion = 0
+        dtpFechaInicio.Value = Now
+        dtpFechaFin.Value = Now.AddDays(1)
         CargarDataGridView()
         ReseteaTodo()
         dgvCompras.Enabled = True
@@ -370,12 +372,18 @@ Public Class FormComprasAProveedores
             If accion = 1 Then
                 If MessageBox.Show("¿Está seguro de querer guardar el registro?", "Confirmación para guardar", MessageBoxButtons.YesNo) = vbYes Then
                     GuardaNuevo()
+                    txtBuscar.Text = ""
+                    dtpFechaInicio.Value = Now
+                    dtpFechaFin.Value = Now.AddDays(1)
                     CargarDataGridView()
                     ReseteaTodo()
                 End If
             Else
                 If MessageBox.Show("¿Está seguro de querer actualizar el registro?", "Confirmación para actualizar", MessageBoxButtons.YesNo) = vbYes Then
                     ActualizaRegistro()
+                    txtBuscar.Text = ""
+                    dtpFechaInicio.Value = Now
+                    dtpFechaFin.Value = Now.AddDays(1)
                     CargarDataGridView()
                     ReseteaTodo()
                 End If
@@ -417,6 +425,8 @@ Public Class FormComprasAProveedores
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         If MessageBox.Show("¿Está seguro de querer eliminar el registro? No se podrá recuperar.", "Confirmación para eliminar", MessageBoxButtons.YesNo) = vbYes Then
             EliminaRegistro()
+            dtpFechaInicio.Value = Now
+            dtpFechaFin.Value = Now.AddDays(1)
             CargarDataGridView()
             ReseteaTodo()
         End If
