@@ -468,7 +468,7 @@ Partial Class FormMateriales
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormMateriales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormMateriales"
+        Me.Text = "Administración de Materiales"
         Me.pnlBarraSuperior.ResumeLayout(False)
         Me.pnlBarraSuperior.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

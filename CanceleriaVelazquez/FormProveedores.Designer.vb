@@ -454,7 +454,7 @@ Partial Class FormProveedores
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormProveedores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormProveedores"
+        Me.Text = "Administración de Proveedores"
         Me.pnlBarraSuperior.ResumeLayout(False)
         Me.pnlBarraSuperior.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

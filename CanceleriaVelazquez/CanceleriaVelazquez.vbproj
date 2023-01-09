@@ -51,6 +51,10 @@
     <ApplicationIcon>Logo_Cancelería.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\..\..\..\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO\2019\PROFESSIONAL\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\SSAS\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
@@ -78,16 +82,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBCanceleriaVelazquezDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCanceleriaVelazquezDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBCanceleriaVelazquezDataSet.vb">
+      <DependentUpon>DBCanceleriaVelazquezDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormClientes.Designer.vb">
       <DependentUpon>FormClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="FormClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormComprarMaterial.Designer.vb">
-      <DependentUpon>FormComprarMaterial.vb</DependentUpon>
+    <Compile Include="FormComprasAProveedores.Designer.vb">
+      <DependentUpon>FormComprasAProveedores.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormComprarMaterial.vb">
+    <Compile Include="FormComprasAProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMateriales.Designer.vb">
@@ -143,13 +155,43 @@
     <Compile Include="Reportes\FormReporteClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\FormReporteComprasAProveedor.Designer.vb">
+      <DependentUpon>FormReporteComprasAProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteComprasAProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteMateriales.Designer.vb">
+      <DependentUpon>FormReporteMateriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteMateriales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteProveedores.Designer.vb">
+      <DependentUpon>FormReporteProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteTrabajos.Designer.vb">
+      <DependentUpon>FormReporteTrabajos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteTrabajos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tickets\FormTicketTrabajo.Designer.vb">
+      <DependentUpon>FormTicketTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets\FormTicketTrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormClientes.resx">
       <DependentUpon>FormClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormComprarMaterial.resx">
-      <DependentUpon>FormComprarMaterial.vb</DependentUpon>
+    <EmbeddedResource Include="FormComprasAProveedores.resx">
+      <DependentUpon>FormComprasAProveedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMateriales.resx">
       <DependentUpon>FormMateriales.vb</DependentUpon>
@@ -172,11 +214,43 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\ReportTicketTrabajo.rdlc" />
+    <EmbeddedResource Include="RDLC\ReportComprasAProveedores.rdlc" />
+    <EmbeddedResource Include="RDLC\ReportTrabajos.rdlc" />
+    <EmbeddedResource Include="RDLC\ReportMateriales.rdlc" />
+    <EmbeddedResource Include="RDLC\ReportProveedores.rdlc" />
+    <EmbeddedResource Include="RDLC\ReportClientes.rdlc" />
     <EmbeddedResource Include="Reportes\FormReporteClientes.resx">
       <DependentUpon>FormReporteClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteComprasAProveedor.resx">
+      <DependentUpon>FormReporteComprasAProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteMateriales.resx">
+      <DependentUpon>FormReporteMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteProveedores.resx">
+      <DependentUpon>FormReporteProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteTrabajos.resx">
+      <DependentUpon>FormReporteTrabajos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tickets\FormTicketTrabajo.resx">
+      <DependentUpon>FormTicketTrabajo.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DBCanceleriaVelazquezDataSet.xsc">
+      <DependentUpon>DBCanceleriaVelazquezDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBCanceleriaVelazquezDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBCanceleriaVelazquezDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBCanceleriaVelazquezDataSet.xss">
+      <DependentUpon>DBCanceleriaVelazquezDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

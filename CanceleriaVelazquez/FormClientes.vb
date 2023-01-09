@@ -369,4 +369,8 @@ Public Class FormClientes
         FormNuevoTrabajo.nombreCliente = txtNombre.Text
         FormNuevoTrabajo.Show()
     End Sub
+
+    Private Sub btnReporteClientes_Click(sender As Object, e As EventArgs) Handles btnReporteClientes.Click
+        FormReporteClientes.Show()
+    End Sub
 End Class

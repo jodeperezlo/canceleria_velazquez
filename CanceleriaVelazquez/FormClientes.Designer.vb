@@ -479,7 +479,7 @@ Partial Class FormClientes
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormClientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormClientes"
+        Me.Text = "Administración de Clientes"
         Me.pnlBackground.ResumeLayout(False)
         Me.pnlContenido.ResumeLayout(False)
         Me.pnlTable.ResumeLayout(False)

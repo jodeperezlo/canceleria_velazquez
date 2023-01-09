@@ -200,6 +200,33 @@ Public Class FormTrabajos
             dbConnection.Close()
         End Try
     End Sub
+
+    Private Sub ImprimirTicketTrabajo()
+        Try
+            dbConnection.Open()
+            Dim query As String = "
+                         SELECT Trabajos.Codigo AS NumeroFactura, Trabajos.Trabajo, Clientes.Codigo AS CodigoCliente, 
+                         Clientes.Nombre, Clientes.Telefono, Clientes.Domicilio, Trabajos.Costo, 
+                         Trabajos.FechaTerminacion AS FechaEstimadaTerminacion
+                         FROM (Clientes INNER JOIN
+                         Trabajos ON Clientes.Codigo = Trabajos.Cliente)
+                         WHERE Trabajos.Codigo = " + txtCodigo.Text + "
+                         ORDER BY Trabajos.Codigo DESC"
+            Dim comando As New OleDb.OleDbCommand(query, dbConnection)
+
+            Dim da As New OleDb.OleDbDataAdapter(comando)
+            Dim ds As New DataSet()
+            da.Fill(ds)
+
+            FormTicketTrabajo.dsFormTicketTrabajo = ds
+
+            FormTicketTrabajo.Show()
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar la información de los proveedores: " & ex.Message, "Error")
+        Finally
+            dbConnection.Close()
+        End Try
+    End Sub
 #End Region
 
     Private Sub FormTrabajos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -226,7 +253,7 @@ Public Class FormTrabajos
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         dtpFechaInicio.Value = Now
-        dtpFechaFin.Value = Now
+        dtpFechaFin.Value = Now.AddDays(1)
         CargarDataGridView()
         ReseteaTodo()
         dgvTrabajos.Enabled = True
@@ -245,9 +272,10 @@ Public Class FormTrabajos
         If ValidaFormulario() Then
             If MessageBox.Show("¿Está seguro de querer actualizar el registro?", "Confirmación", MessageBoxButtons.YesNo) = vbYes Then
                 ActualizaRegistro()
+                ImprimirTicketTrabajo()
                 txtBuscar.Text = ""
                 dtpFechaInicio.Value = Now
-                dtpFechaFin.Value = Now
+                dtpFechaFin.Value = Now.AddDays(1)
                 CargarDataGridView()
                 ReseteaTodo()
             End If
@@ -289,7 +317,7 @@ Public Class FormTrabajos
         If MessageBox.Show("¿Está seguro de querer eliminar el registro? No se podrá recuperar.", "Confirmación", MessageBoxButtons.YesNo) = vbYes Then
             EliminaRegistro()
             dtpFechaInicio.Value = Now
-            dtpFechaFin.Value = Now
+            dtpFechaFin.Value = Now.AddDays(1)
             CargarDataGridView()
             ReseteaTodo()
         End If
@@ -349,5 +377,9 @@ Public Class FormTrabajos
     Private Sub dtpFechaFin_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaFin.ValueChanged
         BuscarPorFechas()
         dtpFechaInicio.MaxDate = dtpFechaFin.Value
+    End Sub
+
+    Private Sub btnReporteTrabajos_Click(sender As Object, e As EventArgs) Handles btnReporteTrabajos.Click
+        FormReporteTrabajos.Show()
     End Sub
 End Class

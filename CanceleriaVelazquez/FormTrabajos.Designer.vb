@@ -498,7 +498,7 @@ Partial Class FormTrabajos
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormTrabajos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormTrabajos"
+        Me.Text = "Administración de Trabajos"
         Me.pnlBarraSuperior.ResumeLayout(False)
         Me.pnlBarraSuperior.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
