@@ -362,4 +362,8 @@ Public Class FormProveedores
     Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress
         e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar)
     End Sub
+
+    Private Sub btnReporteProveedores_Click(sender As Object, e As EventArgs) Handles btnReporteProveedores.Click
+        FormReporteProveedores.Show()
+    End Sub
 End Class

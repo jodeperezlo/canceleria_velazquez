@@ -350,4 +350,8 @@ Public Class FormTrabajos
         BuscarPorFechas()
         dtpFechaInicio.MaxDate = dtpFechaFin.Value
     End Sub
+
+    Private Sub btnReporteTrabajos_Click(sender As Object, e As EventArgs) Handles btnReporteTrabajos.Click
+        FormReporteTrabajos.Show()
+    End Sub
 End Class

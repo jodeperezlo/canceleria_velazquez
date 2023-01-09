@@ -355,6 +355,10 @@ Public Class FormMateriales
             e.SuppressKeyPress = True
         End If
     End Sub
+
+    Private Sub btnReporteMateriales_Click(sender As Object, e As EventArgs) Handles btnReporteMateriales.Click
+        FormReporteMateriales.Show()
+    End Sub
 #End Region
 
 End Class
