@@ -39,6 +39,7 @@ Partial Class FormNuevoTrabajo
         Me.pnlBarraSuperior = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlBackground.SuspendLayout()
         Me.pnlContenido.SuspendLayout()
         Me.pnlBarraIzquierda.SuspendLayout()
@@ -199,6 +200,7 @@ Partial Class FormNuevoTrabajo
         'pnlBarraSuperior
         '
         Me.pnlBarraSuperior.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.pnlBarraSuperior.Controls.Add(Me.Label2)
         Me.pnlBarraSuperior.Controls.Add(Me.PictureBox2)
         Me.pnlBarraSuperior.Controls.Add(Me.Label1)
         Me.pnlBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top
@@ -220,13 +222,24 @@ Partial Class FormNuevoTrabajo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(84, 9)
+        Me.Label1.Location = New System.Drawing.Point(142, 6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(279, 38)
+        Me.Label1.Size = New System.Drawing.Size(279, 26)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Nuevo Trabajo"
+        Me.Label1.Text = "Cancelería Velázquez"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(180, 37)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(194, 26)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Nuevo Trabajo"
         '
         'FormNuevoTrabajo
         '
@@ -240,7 +253,7 @@ Partial Class FormNuevoTrabajo
         Me.MaximizeBox = False
         Me.Name = "FormNuevoTrabajo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Nuevo Trabajo"
+        Me.Text = "Cancelería Velázquez - Nuevo Trabajo"
         Me.pnlBackground.ResumeLayout(False)
         Me.pnlContenido.ResumeLayout(False)
         Me.pnlContenido.PerformLayout()
@@ -268,4 +281,5 @@ Partial Class FormNuevoTrabajo
     Friend WithEvents lblNombre As Label
     Friend WithEvents lblTrabajoPara As Label
     Friend WithEvents lblCliente As Label
+    Friend WithEvents Label2 As Label
 End Class

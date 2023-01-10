@@ -373,4 +373,8 @@ Public Class FormClientes
     Private Sub btnReporteClientes_Click(sender As Object, e As EventArgs) Handles btnReporteClientes.Click
         FormReporteClientes.Show()
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
 End Class
