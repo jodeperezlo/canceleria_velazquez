@@ -187,7 +187,7 @@ Public Class FormTrabajos
     Private Sub BuscarPorFechas()
         Try
             dbConnection.Open()
-            Dim query As String = "SELECT T.Codigo, T.Trabajo, C.Codigo AS [Código del cliente], C.Nombre AS Cliente, T.Costo, T.FechaTerminacion AS [Fecha de terminación] FROM Trabajos T INNER JOIN Clientes C ON C.Codigo = T.Cliente WHERE FechaTerminacion BETWEEN #" + dtpFechaInicio.Value + "# AND #" + dtpFechaFin.Value + "# ORDER BY FechaTerminacion DESC"
+            Dim query As String = "SELECT T.Codigo, T.Trabajo, C.Codigo AS [Código del cliente], C.Nombre AS Cliente, T.Costo, T.FechaTerminacion AS [Fecha de terminación] FROM Trabajos T INNER JOIN Clientes C ON C.Codigo = T.Cliente WHERE FechaTerminacion BETWEEN #" & dtpFechaInicio.Value.Date & "# AND #" & dtpFechaFin.Value.Date & "# ORDER BY FechaTerminacion DESC"
             Dim comando As New OleDb.OleDbCommand(query, dbConnection)
 
             Dim da As New OleDb.OleDbDataAdapter(comando)
@@ -253,8 +253,8 @@ Public Class FormTrabajos
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        dtpFechaInicio.Value = Now
         dtpFechaFin.Value = Now.AddDays(1)
+        dtpFechaInicio.Value = Now
         CargarDataGridView()
         ReseteaTodo()
         dgvTrabajos.Enabled = True
@@ -275,8 +275,8 @@ Public Class FormTrabajos
                 ActualizaRegistro()
                 ImprimirTicketTrabajo()
                 txtBuscar.Text = ""
-                dtpFechaInicio.Value = Now
                 dtpFechaFin.Value = Now.AddDays(1)
+                dtpFechaInicio.Value = Now
                 CargarDataGridView()
                 ReseteaTodo()
             End If
@@ -317,8 +317,8 @@ Public Class FormTrabajos
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         If MessageBox.Show("¿Está seguro de querer eliminar el registro? No se podrá recuperar.", "Confirmación", MessageBoxButtons.YesNo) = vbYes Then
             EliminaRegistro()
-            dtpFechaInicio.Value = Now
             dtpFechaFin.Value = Now.AddDays(1)
+            dtpFechaInicio.Value = Now
             CargarDataGridView()
             ReseteaTodo()
         End If
@@ -371,11 +371,17 @@ Public Class FormTrabajos
     End Sub
 
     Private Sub dtpFechaInicio_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaInicio.ValueChanged
+        If dtpFechaInicio.Value.Day = dtpFechaFin.Value.Day Then
+            dtpFechaFin.Value = dtpFechaInicio.Value.AddDays(1)
+        End If
         BuscarPorFechas()
         dtpFechaFin.MinDate = dtpFechaInicio.Value
     End Sub
 
     Private Sub dtpFechaFin_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaFin.ValueChanged
+        If dtpFechaInicio.Value.Day = dtpFechaFin.Value.Day Then
+            dtpFechaFin.Value = dtpFechaInicio.Value.AddDays(1)
+        End If
         BuscarPorFechas()
         dtpFechaInicio.MaxDate = dtpFechaFin.Value
     End Sub
