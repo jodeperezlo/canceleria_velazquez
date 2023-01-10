@@ -41,7 +41,7 @@ Public Class FormNuevoTrabajo
             comando.Parameters.AddWithValue("Tra", txtTrabajo.Text)
             comando.Parameters.AddWithValue("Cli", codigoCliente)
             comando.Parameters.AddWithValue("Cost", txtCosto.Text)
-            comando.Parameters.AddWithValue("FechaTerm", dtpFechaTerminacion.Value)
+            comando.Parameters.AddWithValue("FechaTerm", dtpFechaTerminacion)
 
             comando.ExecuteNonQuery()
             MessageBox.Show("Se agregó el nuevo trabajo correctamente", "Nuevo trabajo guardado")
@@ -85,10 +85,9 @@ Public Class FormNuevoTrabajo
     End Sub
 
 #End Region
-
-
     Private Sub FormNuevoTrabajo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblCliente.Text = nombreCliente
+        txtTrabajo.Select()
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click

@@ -28,5 +28,4 @@ C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\Ca
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.FormReporteComprasAProveedor.resources
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.FormReporteMateriales.resources
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.FormReporteTrabajos.resources
-C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.vbproj.AssemblyReference.cache
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Debug\CanceleriaVelazquez.FormTicketTrabajo.resources
