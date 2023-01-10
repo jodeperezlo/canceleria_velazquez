@@ -3,11 +3,9 @@ C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\CanceleriaVelazquez.exe
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\CanceleriaVelazquez.pdb
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\CanceleriaVelazquez.xml
-C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\Microsoft.ReportViewer.Common.dll
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\Microsoft.ReportViewer.WinForms.dll
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\Microsoft.SqlServer.Types.dll
-C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.vbproj.AssemblyReference.cache
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.FormClientes.resources
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.FormComprasAProveedores.resources
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.FormMateriales.resources
@@ -23,10 +21,11 @@ C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.FormReporteTrabajos.resources
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.FormTicketTrabajo.resources
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.vbproj.GenerateResource.cache
-C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\RdlCompile.cache
-C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\RdlCompile.compiled
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.vbproj.CoreCompileInputs.cache
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.vbproj.CopyComplete
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.exe
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.xml
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.pdb
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\RdlCompile.cache
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\RdlCompile.compiled

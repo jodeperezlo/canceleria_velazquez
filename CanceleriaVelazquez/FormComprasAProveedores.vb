@@ -215,7 +215,7 @@ Public Class FormComprasAProveedores
     Private Sub BuscarPorFechas()
         Try
             dbConnection.Open()
-            Dim query As String = "SELECT C.Codigo AS [Código Compra], M.Material, M.Tipo, M.Color, P.Proveedor, C.Costo, C.Cantidad, C.Costo * C.Cantidad AS [Total], C.FechaCompra AS [Fecha de compra] FROM (ComprasAProveedor C INNER JOIN Materiales M ON C.Material = M.Codigo) INNER JOIN Proveedores P ON C.Proveedor = P.Codigo WHERE C.FechaCompra BETWEEN #" + dtpFechaInicio.Value + "# AND #" + dtpFechaFin.Value + "# ORDER BY FechaCompra DESC"
+            Dim query As String = "SELECT C.Codigo AS [Código Compra], M.Material, M.Tipo, M.Color, P.Proveedor, C.Costo, C.Cantidad, C.Costo * C.Cantidad AS [Total], C.FechaCompra AS [Fecha de compra] FROM (ComprasAProveedor C INNER JOIN Materiales M ON C.Material = M.Codigo) INNER JOIN Proveedores P ON C.Proveedor = P.Codigo WHERE C.FechaCompra BETWEEN #" & dtpFechaInicio.Value.Date & "# AND #" & dtpFechaFin.Value.Date & "# ORDER BY FechaCompra DESC"
             Dim comando As New OleDb.OleDbCommand(query, dbConnection)
 
             Dim da As New OleDb.OleDbDataAdapter(comando)
@@ -349,8 +349,8 @@ Public Class FormComprasAProveedores
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         accion = 0
-        dtpFechaInicio.Value = Now
         dtpFechaFin.Value = Now.AddDays(1)
+        dtpFechaInicio.Value = Now
         CargarDataGridView()
         ReseteaTodo()
         dgvCompras.Enabled = True
@@ -373,8 +373,8 @@ Public Class FormComprasAProveedores
                 If MessageBox.Show("¿Está seguro de querer guardar el registro?", "Confirmación para guardar", MessageBoxButtons.YesNo) = vbYes Then
                     GuardaNuevo()
                     txtBuscar.Text = ""
-                    dtpFechaInicio.Value = Now
                     dtpFechaFin.Value = Now.AddDays(1)
+                    dtpFechaInicio.Value = Now
                     CargarDataGridView()
                     ReseteaTodo()
                 End If
@@ -382,8 +382,8 @@ Public Class FormComprasAProveedores
                 If MessageBox.Show("¿Está seguro de querer actualizar el registro?", "Confirmación para actualizar", MessageBoxButtons.YesNo) = vbYes Then
                     ActualizaRegistro()
                     txtBuscar.Text = ""
-                    dtpFechaInicio.Value = Now
                     dtpFechaFin.Value = Now.AddDays(1)
+                    dtpFechaInicio.Value = Now
                     CargarDataGridView()
                     ReseteaTodo()
                 End If
@@ -425,8 +425,8 @@ Public Class FormComprasAProveedores
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         If MessageBox.Show("¿Está seguro de querer eliminar el registro? No se podrá recuperar.", "Confirmación para eliminar", MessageBoxButtons.YesNo) = vbYes Then
             EliminaRegistro()
-            dtpFechaInicio.Value = Now
             dtpFechaFin.Value = Now.AddDays(1)
+            dtpFechaInicio.Value = Now
             CargarDataGridView()
             ReseteaTodo()
         End If
@@ -475,11 +475,17 @@ Public Class FormComprasAProveedores
     End Sub
 
     Private Sub dtpFechaInicio_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaInicio.ValueChanged
+        If dtpFechaInicio.Value.Day = dtpFechaFin.Value.Day Then
+            dtpFechaFin.Value = dtpFechaInicio.Value.AddDays(1)
+        End If
         BuscarPorFechas()
         dtpFechaFin.MinDate = dtpFechaInicio.Value
     End Sub
 
     Private Sub dtpFechaFin_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaFin.ValueChanged
+        If dtpFechaInicio.Value.Day = dtpFechaFin.Value.Day Then
+            dtpFechaFin.Value = dtpFechaInicio.Value.AddDays(1)
+        End If
         BuscarPorFechas()
         dtpFechaInicio.MaxDate = dtpFechaFin.Value
     End Sub
