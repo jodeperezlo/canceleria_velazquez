@@ -77,9 +77,9 @@ Partial Class FormComprasAProveedores
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(84, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(511, 38)
+        Me.Label1.Size = New System.Drawing.Size(927, 38)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Administración de Compras"
+        Me.Label1.Text = "Cancelería Velázquez - Administración de Compras"
         '
         'pnlBarraSuperior
         '
@@ -542,7 +542,7 @@ Partial Class FormComprasAProveedores
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormComprasAProveedores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Administración de Compras"
+        Me.Text = "Cancelería Velázquez - Administración de Compras"
         Me.pnlBarraSuperior.ResumeLayout(False)
         Me.pnlBarraSuperior.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

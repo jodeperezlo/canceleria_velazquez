@@ -72,7 +72,7 @@ Partial Class FormTicketTrabajo
         Me.MaximizeBox = False
         Me.Name = "FormTicketTrabajo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Ticket de Trabajo"
+        Me.Text = "Cancelería Velázquez - Ticket de Trabajo"
         CType(Me.TicketTrabajoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DBCanceleriaVelazquezDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -71,7 +71,7 @@ Partial Class FormReporteTrabajos
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormReporteTrabajos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Reporte de Trabajos"
+        Me.Text = "Cancelería Velázquez - Reporte de Trabajos"
         CType(Me.ClientesTrabajosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DBCanceleriaVelazquezDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

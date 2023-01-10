@@ -70,9 +70,9 @@ Partial Class FormMateriales
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(84, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(540, 38)
+        Me.Label1.Size = New System.Drawing.Size(956, 38)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Administración de Materiales"
+        Me.Label1.Text = "Cancelería Velázquez - Administración de Materiales"
         '
         'pnlBarraSuperior
         '
@@ -468,7 +468,7 @@ Partial Class FormMateriales
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormMateriales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Administración de Materiales"
+        Me.Text = "Cancelería Velázquez - Administración de Materiales"
         Me.pnlBarraSuperior.ResumeLayout(False)
         Me.pnlBarraSuperior.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
