@@ -29,3 +29,4 @@ C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\bin\Release\Microsoft.ReportViewer.Common.dll
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\RdlCompile.cache
 C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\RdlCompile.compiled
+C:\JJPL\Repositories\VB.NET\CanceleriaVelazquez\CanceleriaVelazquez\obj\Release\CanceleriaVelazquez.vbproj.AssemblyReference.cache
