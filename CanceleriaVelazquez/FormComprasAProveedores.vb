@@ -100,7 +100,7 @@ Public Class FormComprasAProveedores
             comando.Parameters.AddWithValue("Prov", codigoProveedor)
             comando.Parameters.AddWithValue("Cost", txtCosto.Text)
             comando.Parameters.AddWithValue("Cant", txtCantidad.Text)
-            comando.Parameters.AddWithValue("FechaComp", dtpFechaCompra.Value)
+            comando.Parameters.AddWithValue("FechaComp", dtpFechaCompra)
 
             comando.ExecuteNonQuery()
             MessageBox.Show("Se agregó la nueva compra correctamente", "Nueva compra guardada")

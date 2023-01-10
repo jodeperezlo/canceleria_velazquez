@@ -1,0 +1,231 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CanceleriaVelazquez
+</name>
+</assembly>
+<members>
+<member name="T:CanceleriaVelazquez.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:CanceleriaVelazquez.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:CanceleriaVelazquez.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ClientesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ComprasAProveedorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.MaterialesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ProveedoresDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.TrabajosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ClientesTrabajosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ReporteComprasAProveedorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.TicketTrabajoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ClientesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ComprasAProveedorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.MaterialesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ProveedoresRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.TrabajosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ClientesTrabajosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ReporteComprasAProveedorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.TicketTrabajoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ClientesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ComprasAProveedorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.MaterialesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ProveedoresRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.TrabajosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ClientesTrabajosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.ReporteComprasAProveedorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSet.TicketTrabajoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.ClientesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.ComprasAProveedorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.MaterialesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.ProveedoresTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TrabajosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.ClientesTrabajosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.ReporteComprasAProveedorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TicketTrabajoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(CanceleriaVelazquez.DBCanceleriaVelazquezDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(CanceleriaVelazquez.DBCanceleriaVelazquezDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(CanceleriaVelazquez.DBCanceleriaVelazquezDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TableAdapterManager.UpdateAll(CanceleriaVelazquez.DBCanceleriaVelazquezDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:CanceleriaVelazquez.DBCanceleriaVelazquezDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>
